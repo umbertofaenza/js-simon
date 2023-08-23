@@ -31,4 +31,18 @@ setInterval(function () {
   minutesEl.innerText = Math.floor(minutesToDisplay);
   hoursEl.innerText = Math.floor(hours);
   daysEl.innerText = Math.floor(days);
+
+  //  add "0" before number if it < 10
+  if (secondsEl.innerText < 10) {
+    secondsEl.innerText = "0" + secondsEl.innerText;
+  }
+  if (minutesEl.innerText < 10) {
+    minutesEl.innerText = "0" + minutesEl.innerText;
+  }
+  if (hoursEl.innerText < 10) {
+    hoursEl.innerText = "0" + hoursEl.innerText;
+  }
+  if (daysEl.innerText < 10) {
+    daysEl.innerText = "0" + daysEl.innerText;
+  }
 }, 1000);
