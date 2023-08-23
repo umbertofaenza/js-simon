@@ -2,8 +2,9 @@ const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
+const timesUpEl = document.getElementById("timesup");
 
-setInterval(function () {
+const countdown = setInterval(function () {
   // get dates
   const today = new Date();
   const tomorrowCorrection = new Date("2023-08-24 9:30");
@@ -32,7 +33,7 @@ setInterval(function () {
   hoursEl.innerText = Math.floor(hours);
   daysEl.innerText = Math.floor(days);
 
-  //  add "0" before number if it < 10
+  // add "0" before number if it < 10
   if (secondsEl.innerText < 10) {
     secondsEl.innerText = "0" + secondsEl.innerText;
   }
@@ -44,5 +45,11 @@ setInterval(function () {
   }
   if (daysEl.innerText < 10) {
     daysEl.innerText = "0" + daysEl.innerText;
+  }
+
+  // clear interval when time remaining is 0 (and show message)
+  if (!timeRemainingInMs) {
+    clearInterval(countdown);
+    timesUpEl.classList.remove("d-none");
   }
 }, 1000);

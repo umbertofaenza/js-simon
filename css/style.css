@@ -1,51 +1,56 @@
 body {
-    background-color: #3535EC;
-    font-family: 'Livvic', sans-serif;
-    line-height: 1;
+  background-color: #3535ec;
+  font-family: "Livvic", sans-serif;
+  line-height: 1;
 
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .stage {
-    max-width: 500px;
-    margin: 0 auto;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .panel {
-    background-color: #120945;
-    padding: 16px 24px;
-    border-radius: 8px;
+  background-color: #120945;
+  padding: 16px 24px;
+  border-radius: 8px;
 }
 
-h1 {
-    text-align: center;
-    color: #DE7EB6;
-    margin-bottom: 24px;
-    font-size: 30px;
+h1,
+h2 {
+  text-align: center;
+  color: #de7eb6;
+  margin-bottom: 24px;
+  font-size: 30px;
+}
+
+h2 {
+  margin-top: 20px;
 }
 
 .counter {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .counter-block {
-    color: #ffffff;
-    text-align: center;
-    font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
 }
 
 .counter-block:last-child {
-    color: #F2AD41;
+  color: #f2ad41;
 }
 
 .counter-block-number {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 .counter-block-label {
-    font-size: 20px;
+  font-size: 20px;
 }
