@@ -1,3 +1,8 @@
+const daysEl = document.getElementById("days");
+const hoursEl = document.getElementById("hours");
+const minutesEl = document.getElementById("minutes");
+const secondsEl = document.getElementById("seconds");
+
 // get dates
 const today = new Date();
 const tomorrowCorrection = new Date("2023-08-24 9:30");
@@ -23,3 +28,9 @@ console.log(Math.floor(hours));
 
 const days = hours / 24;
 console.log(Math.floor(days));
+
+// print times on page
+secondsEl.innerText = Math.floor(secondsToDisplay);
+minutesEl.innerText = Math.floor(minutesToDisplay);
+hoursEl.innerText = Math.floor(hours);
+daysEl.innerText = Math.floor(days);
