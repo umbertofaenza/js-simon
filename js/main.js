@@ -48,7 +48,11 @@ const countdown = setInterval(function () {
   }
 
   // clear interval when time remaining is 0 (and show message)
-  if (!timeRemainingInMs) {
+  if (timeRemainingInMs <= 0) {
+    secondsEl.innerText = "00";
+    minutesEl.innerText = "00";
+    hoursEl.innerText = "00";
+    daysEl.innerText = "00";
     clearInterval(countdown);
     timesUpEl.classList.remove("d-none");
   }
